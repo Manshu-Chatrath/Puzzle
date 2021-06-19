@@ -7,7 +7,7 @@ body
 }
 #board div
 {
- border: 1px solid black;
+    box-shadow: 0 0 3px rgba(68, 68, 68, 0.76);
  z-index: 10;
  background-size: 471px 471px;
  width: 157px;
@@ -30,7 +30,6 @@ button:hover,.button a:hover,.upload:hover
 {
     #board div
     {
-     border: none;
      background-size: 249px 249px;
      width: 83px;
      height: 83px;

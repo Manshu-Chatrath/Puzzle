@@ -176,17 +176,23 @@ onstart(event: Event){
   
   let stop=setInterval(()=>{
     sec--;
-    if(document.getElementById('cell11')!.className=='tile11' && document.getElementById('cell12')!.className=='tile12' && document.getElementById('cell13')!.className=='tile13' && document.getElementById('cell21')!.className=='tile21' &&  document.getElementById('cell22')!.className=='tile22' &&  document.getElementById('cell23')!.className=='tile23' &&  document.getElementById('cell31')!.className=='tile31' &&  document.getElementById('cell32')!.className=='tile32' &&  document.getElementById('cell33')!.className=='tile33')
+    if(document.getElementById('cell11')!.className!='tile11' || document.getElementById('cell12')!.className!='tile12' || document.getElementById('cell13')!.className!='tile13' || document.getElementById('cell21')!.className!='tile21' ||  document.getElementById('cell22')!.className!='tile22' ||  document.getElementById('cell23')!.className!='tile23' ||  document.getElementById('cell31')!.className!='tile31' ||  document.getElementById('cell32')!.className!='tile32' || document.getElementById('cell33')!.className!='tile33')
     {clearInterval(stop);
-      if(min<=this.firstmin && sec<=this.firstsec)
+      console.log('boom')
+      //Now we will convert the times into seconds
+      let totalfp=this.firstmin*60+this.firstsec;
+      let totalsp=this.secondmin*60+this.secondsec;
+      let totaltp=this.thirdmin*60+this.thirdsec;
+      let timespent=this.startingmin*60+this.startingsec-min*60-sec;
+      if(timespent<=totalfp)
       {
         this.prize=50;
       }
-      else if(min<=this.secondmin && sec<=this.secondsec)
+      else if(timespent<=totalsp)
       {
         this.prize=10;
       }
-      else if(min<=this.thirdmin && sec<=this.thirdsec)
+      else if(timespent<=totaltp)
       {
         this.prize=5;
       }
@@ -196,7 +202,7 @@ onstart(event: Event){
       }
       success.classList.remove('visible');
     }
-    
+
 if(sec<0)
 {
   sec=60;

@@ -9,7 +9,7 @@
             <div class="mistake"  *ngIf="mistake.length>0">{{mistake}}</div>
             <h2 class="admin">User Admin Panel (APPAGE)</h2>
             <div class="instructions2">
-                <p>So below you can load the image that you want to solve in the puzzle and also you can set the time for different scenarios.</p>
+                <p>So below you can load the image that you want to solve in the puzzle and also you can set the time for different scenarios (Click on arrows to set the time).</p>
             </div>
        <div class="limit-time">
            <label for="">Set total time: </label>
@@ -49,7 +49,7 @@
      <div class="seprator" style="font-weight: bolder;">:</div>
      <div class="seconds">
          <div class="sec-up" id="firstprizesec-up" (click)="upgrade($event)"></div>
-         <input ngModel readonly name="firstprizesec"  id="firstprizesec" class="sec" placeholder="SEC">
+         <input ngModel readonly name="firstprizesec" max="59" id="firstprizesec" class="sec" placeholder="SEC">
          <div class="sec-down" id="firstprizesec-dwn" (click)="upgrade($event)"></div>
      </div>
      </div>
@@ -63,7 +63,7 @@
      <div class="seprator" style="font-weight: bolder;">:</div>
      <div class="seconds">
          <div class="sec-up" id="secondprizesec-up" (click)="upgrade($event)"></div>
-         <input ngModel readonly name="secondprizesec" class="sec" id="secondprizesec" placeholder="SEC">
+         <input ngModel readonly name="secondprizesec" max="59" class="sec" id="secondprizesec" placeholder="SEC">
          <div class="sec-down" id="secondprizesec-dwn" (click)="upgrade($event)"></div>
      </div>
      </div>
@@ -77,7 +77,7 @@
      <div class="seprator" style="font-weight: bolder;">:</div>
      <div class="seconds">
          <div class="sec-up" id="thirdprizesec-up" (click)="upgrade($event)"></div>
-         <input ngModel readonly name="thirdprizesec" class="sec" id="thirdprizesec" placeholder="SEC">
+         <input ngModel readonly name="thirdprizesec" max="59" class="sec" id="thirdprizesec" placeholder="SEC">
          <div class="sec-down" id="thirdprizesec-dwn" (click)="upgrade($event)"></div>
      </div>
      </div>

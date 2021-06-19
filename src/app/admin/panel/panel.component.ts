@@ -65,7 +65,7 @@ setrules(userForm: any)
    this.http.put('https://puzzlebackend.herokuapp.com/setrules',obj).subscribe((response: any)=>{
     if(response)
     {
-      window.location.href='http://localhost:4200/'
+      window.location.href='https://real-puzzle.herokuapp.com/'
     }
    });
   }
@@ -118,15 +118,17 @@ setrules(userForm: any)
       }
     }
     if(target.id==='totalsec-up')
-    {  this.totalsec++;
-      if(this.totalsec<10)
-      {
-        totalsec.value=0+this.totalsec.toString(); 
-      }
-      else
-      {
-        totalsec.value=this.totalsec.toString();
-      }
+    { if(this.totalsec<59)
+      {   this.totalsec++;
+        if(this.totalsec<10)
+        {
+          totalsec.value=0+this.totalsec.toString(); 
+        }
+        else
+        {
+          totalsec.value=this.totalsec.toString();
+        }
+      } 
     }
     if(target.id==='totalsec-down')
     {
@@ -197,13 +199,16 @@ setrules(userForm: any)
     }
     if(target.id==='firstprizesec-up')
     {this.firstprizesec++;
-      if(this.firstprizesec<10)
-      { 
-        firstprizesec.value=0+this.firstprizesec.toString();
-      }
-      else
+      if(this.firstprizesec<59)
       {
-        firstprizesec.value=this.firstprizesec.toString();
+        if(this.firstprizesec<10)
+        { 
+          firstprizesec.value=0+this.firstprizesec.toString();
+        }
+        else
+        {
+          firstprizesec.value=this.firstprizesec.toString();
+        }
       }
     }
   
@@ -246,13 +251,16 @@ setrules(userForm: any)
     }
     if(target.id==='secondprizesec-up')
     {this.secondprizesec++;
-      if(this.secondprizesec<10)
-      { 
-        secondprizesec.value=0+this.secondprizesec.toString();
-      }
-      else
+      if(this.secondprizesec<59)
       {
-        secondprizesec.value=this.secondprizesec.toString();
+        if(this.secondprizesec<10)
+        { 
+          secondprizesec.value=0+this.secondprizesec.toString();
+        }
+        else
+        {
+          secondprizesec.value=this.secondprizesec.toString();
+        }
       }
     }
     if(target.id==='secondprizesec-dwn')
@@ -295,14 +303,18 @@ setrules(userForm: any)
     }
     if(target.id==='thirdprizesec-up')
     {this.thirdprizesec++;
-      if(this.thirdprizesec<10)
-      { 
-        thirdprizesec.value=0+this.thirdprizesec.toString();
-      }
-      else
+      if(this.thirdprizesec<59)
       {
-        thirdprizesec.value=this.thirdprizesec.toString();
+        if(this.thirdprizesec<10)
+        { 
+          thirdprizesec.value=0+this.thirdprizesec.toString();
+        }
+        else
+        {
+          thirdprizesec.value=this.thirdprizesec.toString();
+        }
       }
+
     }
     if(target.id==='thirdprizesec-dwn')
     {  if(this.thirdprizesec>0)
