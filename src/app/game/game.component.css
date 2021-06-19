@@ -357,13 +357,9 @@ width: 55vw;
         width: 249px;
         background-size: 249px 249px;
         background-repeat: no-repeat;
-    }
-    #board div
-    {
-     border: none;
-     background-size: 249px 249px;
-     width: 83px;
-     height: 83px;
+        margin-left: 5px;
+        position: relative;
+        overflow: hidden;
     }
     #overlay {
         position: absolute;

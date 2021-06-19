@@ -227,6 +227,7 @@ let success=document.querySelector('.modal1')!;
 let fail=document.querySelector('.modal2')!;
 let board=document.getElementById('board')!;
 let horizontalvalue=board.offsetHeight/3;
+console.log(horizontalvalue);
 let verticalvalue=horizontalvalue;
 for(let i=1,vertical=0;i<4;i++,vertical-=verticalvalue)
 {  

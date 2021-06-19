@@ -26,3 +26,13 @@ button:hover,.button a:hover,.upload:hover
     transform: translateY(1px);
     outline: none;
 }
+@media(max-width: 540px)
+{
+    #board div
+    {
+     border: none;
+     background-size: 249px 249px;
+     width: 83px;
+     height: 83px;
+    }
+}
