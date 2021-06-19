@@ -1,0 +1,220 @@
+.admin-panel
+{
+    width: 60%;
+    height: 40%;
+    opacity: 1;
+    background-color: #FFFFFF;
+    z-index: 5;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.heading
+{
+    font-weight: bolder;
+    color: white;
+    font-size: 2rem;
+}
+.header
+{
+    height: 8vh;
+    background-color: #15273F;
+    box-shadow: 0 4px 2px -2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.panel
+{   margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+}
+.admin
+{
+    text-align: center;
+}
+.img
+{
+    background-image:url('https://thumbs.dreamstime.com/b/entertainment-games-concept-abstract-background-sliding-puzzle-game-numbers-159605658.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+.container2
+{
+    width: 100vw;
+    min-height: 100vh;
+}
+.submit2
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+.instructions2
+{
+    font-weight: bolder;
+    text-align: center;
+}
+.overlay {
+    position: fixed;
+   height: 100vh;
+   width: 100vw;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.226); 
+    z-index: 0; 
+  }
+  .limit-time
+  {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+      padding: 15px 0px;
+      align-items: center;
+  }
+  input[type="file"]
+  {
+      display: none;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  .minutes,.seconds
+  {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: stretch;
+      align-items: stretch;
+      width: 30%;
+  }
+.minutes .min, 
+  .seconds .sec{
+      background: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      appearance: none;
+      outline: none;
+      border: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+
+.min-up,.min-down,.sec-up,.sec-down
+  {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      cursor: pointer;
+  }
+  .min-up,.sec-up
+  {   margin-bottom: 5px;
+      top: -10px;
+      border-bottom: 10px solid #AAA;
+  }
+  .min-down,.sec-down
+  {   
+      bottom: -10px;
+      border-top: 10px solid #AAA;
+  }
+
+  .upload
+  {
+    font-weight: bolder;
+    background-color: #B2C3D4;
+    padding: 5px 0px;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+.prize-info
+{   
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.limit-time label
+{
+    width: 28%;
+    font-weight: bolder;
+}
+.st
+{
+    border-radius: 5px;
+    font-weight: bolder;    
+    width: 40%;
+    padding: 5px 0;
+}
+.load-image
+{
+    margin-left: 15px;
+    font-weight: bolder;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 90%;
+}
+.loadimage
+{
+    background-color: #EFEFEF;
+    padding: 5px;
+    border-radius: 5px;
+}
+.mistake
+{
+    text-align: center;
+    font-weight: bolder;
+    color: red;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    height: fit-content;
+}
+.url
+{   padding: 5px;
+   border: none;
+
+    border-radius: 5px;
+    width: 80%;
+}
+@media(max-width: 1246px)
+{
+.admin-panel{
+width: 60%;
+}
+}
+@media(max-width: 1124px)
+{
+.admin-panel{
+width: 70%;
+}
+}
+@media(max-width: 900px)
+{
+.admin-panel{
+width: 80%;
+}
+}
+@media(max-width: 750px)
+{
+.admin-panel{
+width: 90%;
+}
+}
+@media(max-width: 600px)
+{
+.admin-panel{
+width: 100%;
+}
+}

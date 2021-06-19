@@ -1,0 +1,90 @@
+
+<div id class="img"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="header">
+            <div style="z-index: 6;"  class="heading">Puzzle Game To Win</div>
+        </div>
+        <div class="time">
+            <div class="box" style="z-index: 6;">
+                <div class="t">
+                    <div class="as">Time:</div>
+                    <div class="clock">&nbsp;<span class="minutes">00</span>:<span class="seconds">00</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <div id="game">
+                <div id="board">
+                </div>
+                <div id="overlay" class="hide"></div>
+                </div>
+        </div>
+        <div>
+            <div class="instructions" >
+                <p style="z-index: 6; color: white; position: relative;" class="p" >Once you'll click on start then you'll have <span *ngIf="10>startingmin">0</span>{{startingmin}}:<span *ngIf="10>startingsec">0</span>{{startingsec}} minutes to complete this puzzle. If solved within certain amount of time then the prize will be rewarded accordingly.</p>
+            </div>
+            <div id="start" >
+                <button style="z-index: 6;" class="start" (click)="onstart($event)">Start</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal1 visible">
+        <div class="winner">
+            <div class="mistake" *ngIf="mistake.length>0">{{mistake}}</div>
+            <div class="heading2">Puzzle Completed Successfully</div>
+            <div class="punch-line">Congratulations you have completed this puzzle in a given time and you ll get cash prize of {{prize}}$</div>
+            <form class="for" action="" #userForm="ngForm">
+                <div class="email">
+                    <label for="">Email: </label><br>
+                    <input  ngModel type="email" name="email"  class="e" placeholder="Enter your email">
+                </div>
+                <div class="basic-details">
+                    <div class="player-name">
+                        <label for="">Name: </label><br>
+                        <input  ngModel type="text"  name="name" class="name" placeholder="Enter your name">
+                    </div>
+                    <div class="cell-no">
+                        <label for="">Contact no: </label><br>
+                        <input  ngModel maxlength="10"  type="tel" name="contact" class="contact" placeholder="Enter your cell no">
+                    </div>
+                </div>
+                <div class="btn2">
+                    <button type="button" (click)="adduser(userForm)"  class="submit">Submit</button>
+                </div>
+            </form>
+            <div class="res" *ngIf="loading.length>0">
+                {{loading}}
+            </div>
+            <div class="punch">You will recieve a confirmation email for the prize and you will be contacted by one of our representative.</div>
+        </div>
+    </div>
+    <div class="modal2 visible">
+        <div class="winner">
+            <div class="heading2">Unfortunately, you failed to complete the puzzle in a given amount of time</div>
+            <div class="time23">Retry in <span class="minutes2">05</span>:<span class="seconds2">00</span></div>
+            <div class="retry">
+                <button class="submit33" (click)="reset()" >Retry</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal3">
+        <div class="winner" *ngIf="firstsec>0 || firstmin>0">
+            <div class="heading2">Welcome to PGPAGE!!<br></div>
+           <div class="ru">
+            <ul>
+                So below are the cash prizes you can win if:
+                <li>You complete the puzzle between 00:00 min to <span *ngIf="10>firstmin">0</span>{{firstmin}}:<span *ngIf="10>firstsec">0</span>{{firstsec}} min then you can get 50$.</li>
+                <li>You complete the puzzle between <span *ngIf="10>firstmin">0</span>{{firstmin}}:<span *ngIf="10>firstsec">0</span>{{firstsec}} min to <span *ngIf="10>secondmin">0</span>{{secondmin}}:<span *ngIf="10>secondsec">0</span>{{secondsec}} min then you can get 10$.</li>
+                <li>You complete the puzzle between <span *ngIf="10>secondmin">0</span>{{secondmin}}:<span *ngIf="10>secondsec">0</span>{{secondsec}} min to <span *ngIf="10>thirdmin">0</span>{{thirdmin}}:<span *ngIf="10>thirdsec">0</span>{{thirdsec}} min then you can get 5$ and total time to complete puzzle will be <span *ngIf="10>startingmin">0</span>{{startingmin}}:<span *ngIf="10>startingsec">0</span>{{startingsec}} min.</li>
+            </ul>
+           </div>
+           
+            <div class="retry">
+                <button class="submit33" *ngIf="firstsec>0 || firstmin>0" (click)="close()" >Let's Play</button>
+            </div>
+        </div>
+        <div class="wait"  *ngIf="firstsec==0 && firstmin==0">
+            <div class="loader"></div>
+        </div>
+    </div>

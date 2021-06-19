@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body
+{
+    margin: 0;
+    font-family: sans-serif;   
+}
+#board div
+{
+ border: 1px solid black;
+ z-index: 10;
+ background-size: 471px 471px;
+ width: 157px;
+ height: 157px;
+ position: absolute;
+ display: flex;
+}
+button:hover,.button a:hover,.upload:hover
+{
+    transform: translateY(2px);
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    cursor: pointer;
+}
+.btns:active
+{
+    transform: translateY(1px);
+    outline: none;
+}

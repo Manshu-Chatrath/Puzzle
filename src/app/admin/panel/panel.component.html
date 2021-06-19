@@ -1,0 +1,95 @@
+<div class="img"></div>
+<div class="overlay"></div>
+<div class="container2">
+    <div class="header" style="z-index: 70" >
+        <div class="heading" style="z-index: 70">Puzzle Game To Win</div>
+    </div>
+    <div class="panel">
+        <form action="" class="admin-panel" #userForm="ngForm">
+            <div class="mistake"  *ngIf="mistake.length>0">{{mistake}}</div>
+            <h2 class="admin">User Admin Panel (APPAGE)</h2>
+            <div class="instructions2">
+                <p>So below you can load the image that you want to solve in the puzzle and also you can set the time for different scenarios.</p>
+            </div>
+       <div class="limit-time">
+           <label for="">Set total time: </label>
+        <div class="minutes">
+            <div class="min-up" id="totalmin-up" (click)="upgrade($event)"></div>
+            <input ngModel readonly name="totalmin" type="number" id="totalmin" class="min" placeholder="MIN"/>
+            <div class="min-down" id="totalmin-down" (click)="upgrade($event)" ></div>
+        </div>
+        <div class="seprator" style="font-weight: bolder;">:</div>
+        <div class="seconds">
+            <div class="sec-up" id="totalsec-up"  (click)="upgrade($event)"></div>
+            <input  ngModel readonly name="totalsec" type="number" id="totalsec" class="sec" placeholder="SEC" >
+            <div class="sec-down" id="totalsec-down" (click)="upgrade($event)"></div>
+        </div>
+       </div>
+       <div class="limit-time">
+        <label for="">Set Time Block Limitation (only in minutes): </label>
+     <div class="minutes">
+         <div class="min-up" id="limitationup-min" (click)="upgrade($event)"></div>
+         <input ngModel readonly name="limitationmin" required id="limitationmin" class="min" placeholder="MIN">
+         <div class="min-down" id="limitationdn-min" (click)="upgrade($event)"></div>
+     </div>
+     <div class="seprator" style="font-weight: bolder;">:</div>
+     <div class="seconds">
+         <div class="sec-up"  id="limitationup-sec" (click)="upgrade($event)"></div>
+         <input readonly id="limitationsec" class="sec" placeholder="SEC">
+         <div class="sec-down"  id="limitationdn-sec" (click)="upgrade($event)"></div>
+     </div>
+     </div>
+     <div class="limit-time">
+        <label for="">Set First Prize 50$: </label>
+     <div class="minutes">
+         <div class="min-up" id="firstprizemin-up" (click)="upgrade($event)" ></div>
+         <input ngModel readonly name="firstprizemin"  id="firstprizemin" class="min" placeholder="MIN">
+         <div class="min-down" id="firstprizemin-dwn" (click)="upgrade($event)"></div>
+     </div>
+     <div class="seprator" style="font-weight: bolder;">:</div>
+     <div class="seconds">
+         <div class="sec-up" id="firstprizesec-up" (click)="upgrade($event)"></div>
+         <input ngModel readonly name="firstprizesec"  id="firstprizesec" class="sec" placeholder="SEC">
+         <div class="sec-down" id="firstprizesec-dwn" (click)="upgrade($event)"></div>
+     </div>
+     </div>
+     <div class="limit-time">
+        <label for="">Set Second Prize 10$: </label>
+     <div class="minutes">
+         <div class="min-up" id="secondprizemin-up" (click)="upgrade($event)"></div>
+         <input ngModel readonly name="secondprizemin"  id="secondprizemin"  class="min" placeholder="MIN">
+         <div class="min-down" id="secondprizemin-dwn" (click)="upgrade($event)"></div>
+     </div>
+     <div class="seprator" style="font-weight: bolder;">:</div>
+     <div class="seconds">
+         <div class="sec-up" id="secondprizesec-up" (click)="upgrade($event)"></div>
+         <input ngModel readonly name="secondprizesec" class="sec" id="secondprizesec" placeholder="SEC">
+         <div class="sec-down" id="secondprizesec-dwn" (click)="upgrade($event)"></div>
+     </div>
+     </div>
+     <div class="limit-time">
+        <label for="">Set Third Prize 5$: </label>
+     <div class="minutes">
+         <div class="min-up" id="thirdprizemin-up" (click)="upgrade($event)"></div>
+         <input ngModel readonly name="thirdprizemin"   class="min" id="thirdprizemin" placeholder="MIN">
+         <div class="min-down" id="thirdprizemin-dwn" (click)="upgrade($event)"></div>
+     </div>
+     <div class="seprator" style="font-weight: bolder;">:</div>
+     <div class="seconds">
+         <div class="sec-up" id="thirdprizesec-up" (click)="upgrade($event)"></div>
+         <input ngModel readonly name="thirdprizesec" class="sec" id="thirdprizesec" placeholder="SEC">
+         <div class="sec-down" id="thirdprizesec-dwn" (click)="upgrade($event)"></div>
+     </div>
+     </div>
+
+    
+        <div class="load-image">
+            <div for="" class="loadimage">Load the image</div>
+            <input ngModel name="img" type="url" class="url" placeholder="Enter url of the image">
+        </div>
+          <div class="submit2">
+              <button type="button" (click)="setrules(userForm)"  class="st">Set Rules</button>
+          </div>
+        </form>
+    </div>
+</div>

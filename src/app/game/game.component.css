@@ -1,0 +1,413 @@
+.heading
+{
+    font-weight: bolder;
+    color: white;
+    font-size: 2rem;
+}
+#game
+{margin-top: 5px;
+width: 484px;
+height: 471px;
+margin-left: 5px;
+position: relative;
+}
+#overlay {
+    position: absolute;
+   width: 471px;
+      height: inherit;
+      left: 5px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8); 
+    z-index: 2; 
+  }
+  .mistake
+  {
+      text-align: center;
+      font-weight: bolder;
+      color: #DC3545;
+  }
+  .res
+  {
+      text-align: center;
+      font-weight: bolder;
+      margin: 20px;
+  }
+  .hide
+  {
+      display: none;
+  }
+  
+#board
+{  
+    width: inherit;
+    height: 471px;
+    background-size: 471px 471px;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#start
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.box
+{
+    border-top: double;
+    border-bottom: double;
+    border-radius: 15px;
+}
+.time
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    z-index: 6;
+    
+}
+.overlay {
+    position: absolute;
+   height: 100vh;
+   width: 100vw;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.226); 
+    z-index: 0; 
+  }
+ul
+{
+    width: 85%;
+}
+  .ru
+  {
+      text-align: center;
+      font-weight: bolder;
+  }
+  li
+  {
+      text-decoration: none;List-style-type: none;
+  }
+.img
+{
+    background-image:url('https://thumbs.dreamstime.com/b/entertainment-games-concept-abstract-background-sliding-puzzle-game-numbers-159605658.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+.t
+{
+    width: 200px;
+    background-color: #B2C3D4;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.b
+{
+    display: flex;
+    justify-content: center;
+}
+#board div:active
+{
+    transition: 1s all;
+}
+.header
+{
+    height: 8vh;
+    background-color: #15273F;
+    box-shadow: 0 4px 2px -2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container
+{
+    width: 100vw;
+    min-height: 100vh;
+}
+.instructions
+{
+    margin: auto;
+    width: 70%;
+}
+.p
+{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    
+}
+.start
+{
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 1rem;
+    background-color: #B2C3D4;
+    cursor: pointer;
+    border: none;
+    
+}
+
+button:hover,.button a:hover,.upload:hover
+{
+    transform: translateY(2px);
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    cursor: pointer;
+}
+.btns:active
+{
+    transform: translateY(1px);
+    outline: none;
+}
+.clock,.as
+{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: white;
+}
+.modal1, .modal2, .modal3
+{
+    background-color: rgba(0,0,0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+.winner
+{
+    width: 40vw;
+    position: relative;
+    background-color: #ECE8E9;
+    height: min-content;
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin-top: 200px;
+}
+.heading2
+{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.punch-line
+{
+    text-align: center;
+}
+.email
+{
+    margin-left: 5%;
+}
+.email label
+{
+    color: grey;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+.e 
+{
+    border: none;
+    border-bottom: 2px solid grey;
+    width: 93%;
+    background-color: #ECE8E9;
+}
+.basic-details
+{
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-between;
+}
+.basic-details label
+{
+    color: grey;
+    font-weight: bolder;
+}
+.name
+{
+    border: none;
+    border-bottom: 2px solid grey;
+    width: 93%;
+    background-color: #ECE8E9;
+}
+.player-name
+{
+    width: 50%;
+}
+.contact
+{ border: none;
+    border-bottom: 2px solid grey;
+    width: 100%;
+    background-color: #ECE8E9;
+}
+.cell-no
+{
+    margin-right: 7%;
+    width: 50%;
+}
+.basic-details
+{
+    margin-left: 5%;
+}
+input:focus
+{
+    outline: none;
+}
+.punch
+{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1rem;
+    color: gray;
+}
+.btn2
+{   margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+.submit33,.submit
+{
+    width: 90%;
+    padding: 5px;
+    background-color: #DC3545;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+    font-size: 1rem;
+
+}
+.visible
+{
+    visibility: hidden;
+}
+.retry
+{
+    display: flex;
+    justify-content: center;
+}
+.time23
+{
+    margin: 5%;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+@media(max-width: 1246px)
+{
+.winner{
+width: 55vw;
+}
+}
+@media(max-width: 900px)
+{
+    .winner
+    {
+        width: 70vw;
+    }
+}
+@media(max-width: 720px)
+{
+    .winner
+    {
+        width: 90vw;
+    }
+}
+@media(max-width: 540px)
+{
+    .winner
+    {
+        margin-top: 100px;
+    }
+    #game
+    {margin-top: 5px;
+    width: 255px;
+    height: 255px;
+    margin-left: 5px;
+    position: relative;
+    }
+    #overlay {
+        position: fixed;
+       width: 249px;
+          height: inherit;
+          left: 5px;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.8); 
+        z-index: 2; 
+      }
+    #board
+    {  
+        height: 249px;
+        width: 249px;
+        background-size: 249px 249px;
+        background-repeat: no-repeat;
+    }
+    #board div
+    {
+     border: none;
+     background-size: 249px 249px;
+     width: 83px;
+     height: 83px;
+    }
+    #overlay {
+        position: absolute;
+       width: 249px;
+          height: 249px;
+          top: 0px;
+      }
+}
+@media(max-width: 484px)
+{
+    .winner
+    {
+        width: 100vw;
+    }
+    .heading
+    {
+        font-size: 1.5rem;
+    }
+
+}
+
+.wait
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 40vh;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

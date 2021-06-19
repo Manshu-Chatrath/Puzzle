@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { RulesService } from './rules.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
