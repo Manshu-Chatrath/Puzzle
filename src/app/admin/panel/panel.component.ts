@@ -62,7 +62,7 @@ setrules(userForm: any)
   }
   else
   { this.mistake='';
-   this.http.put('https://puzzlebackend.herokuapp.com/setrules',obj).subscribe((response: any)=>{
+   this.http.put('https://puzzlebackend-49ea9cada4a5.herokuapp.com/setrules',obj).subscribe((response: any)=>{
     if(response)
     {
       window.location.href='https://real-puzzle.herokuapp.com/'
