@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 export class RulesService {
 constructor(private http: HttpClient) {}
   public getinfo() {
-    return this.http.get('https://puzzlebackend.herokuapp.com/info')
+    return this.http.get('https://puzzlebackend-49ea9cada4a5.herokuapp.com/info')
 } 
 public personalinfo(obj: any)
 {
-  return this.http.post('https://puzzlebackend.herokuapp.com/save',obj);
+  return this.http.post('https://puzzlebackend-49ea9cada4a5.herokuapp.com/save',obj);
 }
 }
